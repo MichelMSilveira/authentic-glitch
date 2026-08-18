@@ -37,15 +37,16 @@
     .archive-label { font-family:"DM Mono"; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--purple-light); }
     .hero-description { margin-top:24px; max-width:620px; font-family:"DM Mono"; font-size:clamp(1.05rem,1.35vw,1.35rem); line-height:1.58; letter-spacing:.045em; text-transform:uppercase; color:#b8b3ad; }
     .hero-description strong { color:var(--white); font-weight:400; }
-    .gallery-wall { display:flex; flex-direction:column; gap:9px; padding-bottom:45px; transform:rotate(-.35deg) scale(1.01); }
+    .gallery-wall { display:flex; flex-direction:column; gap:10px; padding-bottom:45px; transform:rotate(-.35deg) scale(1.01); }
+    .gallery-theme { padding:5px 4vw 0; font-family:"DM Mono"; font-size:.58rem; letter-spacing:.14em; text-transform:uppercase; color:var(--purple-light); }
     .gallery-row { width:100%; position:relative; overflow:hidden; --duration:60s; }
     .gallery-track { width:max-content; display:flex; gap:9px; animation:move-left var(--duration) linear infinite; will-change:transform; }
     .gallery-row.reverse .gallery-track { animation-name:move-right; }
     .gallery-row:hover .gallery-track { animation-play-state:paused; }
     @keyframes move-left { from{transform:translateX(0)} to{transform:translateX(-50%)} }
     @keyframes move-right { from{transform:translateX(-50%)} to{transform:translateX(0)} }
-    .row-1{--duration:58s}.row-2{--duration:73s}.row-3{--duration:63s}.row-4{--duration:78s}.row-5{--duration:67s}
-    .row-1 .gallery-card{height:165px}.row-2 .gallery-card{height:205px}.row-3 .gallery-card{height:260px}.row-4 .gallery-card{height:195px}.row-5 .gallery-card{height:155px}
+    .row-1{--duration:58s}.row-2{--duration:70s}.row-3{--duration:76s}.row-4{--duration:64s}
+    .row-1 .gallery-card{height:180px}.row-2 .gallery-card{height:220px}.row-3 .gallery-card{height:250px}.row-4 .gallery-card{height:195px}
     .gallery-card { flex-shrink:0; min-width:220px; position:relative; overflow:hidden; cursor:pointer; background:#151515; transition:transform .35s cubic-bezier(.2,.8,.2,1),opacity .35s ease; }
     .gallery-card.vertical{width:175px}.gallery-card.medium{width:310px}.gallery-card.wide{width:430px}.gallery-card.xwide{width:540px}
     .gallery-card img { width:100%; height:100%; object-fit:cover; filter:saturate(.86) contrast(1.03); transition:transform .75s cubic-bezier(.2,.8,.2,1),filter .45s; }
@@ -113,8 +114,8 @@
       .hero-title { font-size:17vw; line-height:.8; }
       .hero-side { min-width:0; margin-top:32px; }
       .hero-description { max-width:34rem; font-size:clamp(.95rem,4vw,1.15rem); line-height:1.6; }
-      .gallery-wall{gap:7px}.gallery-track{gap:7px}
-      .row-1 .gallery-card{height:115px}.row-2 .gallery-card{height:140px}.row-3 .gallery-card{height:180px}.row-4 .gallery-card{height:135px}.row-5 .gallery-card{height:105px}
+      .gallery-wall{gap:7px}.gallery-track{gap:7px}.gallery-theme{padding-left:5vw}
+      .row-1 .gallery-card{height:130px}.row-2 .gallery-card{height:155px}.row-3 .gallery-card{height:180px}.row-4 .gallery-card{height:145px}
       .gallery-card.vertical{width:115px}.gallery-card.medium{width:200px}.gallery-card.wide{width:275px}.gallery-card.xwide{width:335px}
       .photo-info { opacity:1; transform:none; }
       .intro { padding:120px 6vw; grid-template-columns:1fr; gap:40px; }
@@ -157,59 +158,50 @@
   </div>
 
   <div class="gallery-wall">
+    <div class="gallery-theme">01 / Eventos</div>
     <div class="gallery-row row-1"><div class="gallery-track">
-      <div class="gallery-card vertical" data-title="Portrait" data-number="001"><img src="images/public-1/public-1-01.webp" alt="Retrato"><div class="photo-info"><strong>Portrait</strong><span>001</span></div></div>
-      <div class="gallery-card xwide" data-title="Spaces" data-number="002"><img src="images/public-1/public-1-02.webp" alt="Arquitetura e interiores"><div class="photo-info"><strong>Spaces</strong><span>002</span></div></div>
-      <div class="gallery-card wide" data-title="Portrait" data-number="003"><img src="images/public-1/public-1-03.webp" alt="Retrato"><div class="photo-info"><strong>Portrait</strong><span>003</span></div></div>
-      <div class="gallery-card medium" data-title="People" data-number="004"><img src="images/public-1/public-1-04.webp" alt="Retrato"><div class="photo-info"><strong>People</strong><span>004</span></div></div>
-      <div class="gallery-card vertical" data-title="Portrait" data-number="001"><img src="images/public-1/public-1-01.webp" alt="Retrato"><div class="photo-info"><strong>Portrait</strong><span>001</span></div></div>
-      <div class="gallery-card xwide" data-title="Spaces" data-number="002"><img src="images/public-1/public-1-02.webp" alt="Arquitetura e interiores"><div class="photo-info"><strong>Spaces</strong><span>002</span></div></div>
-      <div class="gallery-card wide" data-title="Portrait" data-number="003"><img src="images/public-1/public-1-03.webp" alt="Retrato"><div class="photo-info"><strong>Portrait</strong><span>003</span></div></div>
-      <div class="gallery-card medium" data-title="People" data-number="004"><img src="images/public-1/public-1-04.webp" alt="Retrato"><div class="photo-info"><strong>People</strong><span>004</span></div></div>
+      <div class="gallery-card wide" data-title="Event" data-number="005"><img src="images/public-1/public-1-05.webp" alt="Evento"><div class="photo-info"><strong>Event</strong><span>005</span></div></div>
+      <div class="gallery-card medium" data-title="Atmosphere" data-number="011"><img src="images/public-1/public-1-11.webp" alt="Ambiente de evento"><div class="photo-info"><strong>Atmosphere</strong><span>011</span></div></div>
+      <div class="gallery-card wide" data-title="Event Detail" data-number="012"><img src="images/public-1/public-1-12.webp" alt="Detalhe de evento"><div class="photo-info"><strong>Event Detail</strong><span>012</span></div></div>
+      <div class="gallery-card wide" data-title="Event" data-number="005"><img src="images/public-1/public-1-05.webp" alt="Evento"><div class="photo-info"><strong>Event</strong><span>005</span></div></div>
+      <div class="gallery-card medium" data-title="Atmosphere" data-number="011"><img src="images/public-1/public-1-11.webp" alt="Ambiente de evento"><div class="photo-info"><strong>Atmosphere</strong><span>011</span></div></div>
+      <div class="gallery-card wide" data-title="Event Detail" data-number="012"><img src="images/public-1/public-1-12.webp" alt="Detalhe de evento"><div class="photo-info"><strong>Event Detail</strong><span>012</span></div></div>
     </div></div>
 
+    <div class="gallery-theme">02 / Arte & Cultura</div>
     <div class="gallery-row reverse row-2"><div class="gallery-track">
-      <div class="gallery-card wide" data-title="Event" data-number="005"><img src="images/public-1/public-1-05.webp" alt="Evento"><div class="photo-info"><strong>Event</strong><span>005</span></div></div>
       <div class="gallery-card xwide" data-title="Street Art" data-number="006"><img src="images/public-1/public-1-06.webp" alt="Arte urbana"><div class="photo-info"><strong>Street Art</strong><span>006</span></div></div>
-      <div class="gallery-card medium" data-title="Portrait" data-number="007"><img src="images/public-1/public-1-07.webp" alt="Retrato"><div class="photo-info"><strong>Portrait</strong><span>007</span></div></div>
-      <div class="gallery-card xwide" data-title="Mural" data-number="008"><img src="images/public-1/public-1-08.webp" alt="Mural"><div class="photo-info"><strong>Mural</strong><span>008</span></div></div>
-      <div class="gallery-card wide" data-title="Event" data-number="005"><img src="images/public-1/public-1-05.webp" alt="Evento"><div class="photo-info"><strong>Event</strong><span>005</span></div></div>
+      <div class="gallery-card wide" data-title="Mural" data-number="008"><img src="images/public-1/public-1-08.webp" alt="Mural"><div class="photo-info"><strong>Mural</strong><span>008</span></div></div>
+      <div class="gallery-card xwide" data-title="Street Art" data-number="009"><img src="images/public-1/public-1-09.webp" alt="Arte urbana"><div class="photo-info"><strong>Street Art</strong><span>009</span></div></div>
       <div class="gallery-card xwide" data-title="Street Art" data-number="006"><img src="images/public-1/public-1-06.webp" alt="Arte urbana"><div class="photo-info"><strong>Street Art</strong><span>006</span></div></div>
-      <div class="gallery-card medium" data-title="Portrait" data-number="007"><img src="images/public-1/public-1-07.webp" alt="Retrato"><div class="photo-info"><strong>Portrait</strong><span>007</span></div></div>
-      <div class="gallery-card xwide" data-title="Mural" data-number="008"><img src="images/public-1/public-1-08.webp" alt="Mural"><div class="photo-info"><strong>Mural</strong><span>008</span></div></div>
+      <div class="gallery-card wide" data-title="Mural" data-number="008"><img src="images/public-1/public-1-08.webp" alt="Mural"><div class="photo-info"><strong>Mural</strong><span>008</span></div></div>
+      <div class="gallery-card xwide" data-title="Street Art" data-number="009"><img src="images/public-1/public-1-09.webp" alt="Arte urbana"><div class="photo-info"><strong>Street Art</strong><span>009</span></div></div>
     </div></div>
 
+    <div class="gallery-theme">03 / Retratos</div>
     <div class="gallery-row row-3"><div class="gallery-track">
-      <div class="gallery-card xwide" data-title="Street Art" data-number="009"><img src="images/public-1/public-1-09.webp" alt="Arte urbana"><div class="photo-info"><strong>Street Art</strong><span>009</span></div></div>
+      <div class="gallery-card vertical" data-title="Portrait" data-number="001"><img src="images/public-1/public-1-01.webp" alt="Retrato"><div class="photo-info"><strong>Portrait</strong><span>001</span></div></div>
+      <div class="gallery-card wide" data-title="Portrait" data-number="003"><img src="images/public-1/public-1-03.webp" alt="Retrato"><div class="photo-info"><strong>Portrait</strong><span>003</span></div></div>
+      <div class="gallery-card medium" data-title="People" data-number="004"><img src="images/public-1/public-1-04.webp" alt="Retrato"><div class="photo-info"><strong>People</strong><span>004</span></div></div>
+      <div class="gallery-card medium" data-title="Portrait" data-number="007"><img src="images/public-1/public-1-07.webp" alt="Retrato"><div class="photo-info"><strong>Portrait</strong><span>007</span></div></div>
       <div class="gallery-card wide" data-title="Portrait" data-number="010"><img src="images/public-1/public-1-10.webp" alt="Retrato"><div class="photo-info"><strong>Portrait</strong><span>010</span></div></div>
-      <div class="gallery-card medium" data-title="Atmosphere" data-number="011"><img src="images/public-1/public-1-11.webp" alt="Ambiente"><div class="photo-info"><strong>Atmosphere</strong><span>011</span></div></div>
-      <div class="gallery-card wide" data-title="Event Detail" data-number="012"><img src="images/public-1/public-1-12.webp" alt="Detalhe de evento"><div class="photo-info"><strong>Event Detail</strong><span>012</span></div></div>
-      <div class="gallery-card xwide" data-title="Street Art" data-number="009"><img src="images/public-1/public-1-09.webp" alt="Arte urbana"><div class="photo-info"><strong>Street Art</strong><span>009</span></div></div>
+      <div class="gallery-card wide" data-title="Portrait" data-number="013"><img src="images/public-1/public-1-13.webp" alt="Retrato"><div class="photo-info"><strong>Portrait</strong><span>013</span></div></div>
+      <div class="gallery-card vertical" data-title="Portrait" data-number="001"><img src="images/public-1/public-1-01.webp" alt="Retrato"><div class="photo-info"><strong>Portrait</strong><span>001</span></div></div>
+      <div class="gallery-card wide" data-title="Portrait" data-number="003"><img src="images/public-1/public-1-03.webp" alt="Retrato"><div class="photo-info"><strong>Portrait</strong><span>003</span></div></div>
+      <div class="gallery-card medium" data-title="People" data-number="004"><img src="images/public-1/public-1-04.webp" alt="Retrato"><div class="photo-info"><strong>People</strong><span>004</span></div></div>
+      <div class="gallery-card medium" data-title="Portrait" data-number="007"><img src="images/public-1/public-1-07.webp" alt="Retrato"><div class="photo-info"><strong>Portrait</strong><span>007</span></div></div>
       <div class="gallery-card wide" data-title="Portrait" data-number="010"><img src="images/public-1/public-1-10.webp" alt="Retrato"><div class="photo-info"><strong>Portrait</strong><span>010</span></div></div>
-      <div class="gallery-card medium" data-title="Atmosphere" data-number="011"><img src="images/public-1/public-1-11.webp" alt="Ambiente"><div class="photo-info"><strong>Atmosphere</strong><span>011</span></div></div>
-      <div class="gallery-card wide" data-title="Event Detail" data-number="012"><img src="images/public-1/public-1-12.webp" alt="Detalhe de evento"><div class="photo-info"><strong>Event Detail</strong><span>012</span></div></div>
+      <div class="gallery-card wide" data-title="Portrait" data-number="013"><img src="images/public-1/public-1-13.webp" alt="Retrato"><div class="photo-info"><strong>Portrait</strong><span>013</span></div></div>
     </div></div>
 
+    <div class="gallery-theme">04 / Spaces</div>
     <div class="gallery-row reverse row-4"><div class="gallery-track">
-      <div class="gallery-card wide" data-title="Portrait" data-number="013"><img src="images/public-1/public-1-13.webp" alt="Retrato"><div class="photo-info"><strong>Portrait</strong><span>013</span></div></div>
-      <div class="gallery-card vertical" data-title="Spaces" data-number="014"><img src="images/public-1/public-1-14.webp" alt="Arquitetura e interiores"><div class="photo-info"><strong>Spaces</strong><span>014</span></div></div>
-      <div class="gallery-card xwide" data-title="Street Art" data-number="006"><img src="images/public-1/public-1-06.webp" alt="Arte urbana"><div class="photo-info"><strong>Street Art</strong><span>006</span></div></div>
-      <div class="gallery-card medium" data-title="People" data-number="004"><img src="images/public-1/public-1-04.webp" alt="Retrato"><div class="photo-info"><strong>People</strong><span>004</span></div></div>
-      <div class="gallery-card wide" data-title="Portrait" data-number="013"><img src="images/public-1/public-1-13.webp" alt="Retrato"><div class="photo-info"><strong>Portrait</strong><span>013</span></div></div>
-      <div class="gallery-card vertical" data-title="Spaces" data-number="014"><img src="images/public-1/public-1-14.webp" alt="Arquitetura e interiores"><div class="photo-info"><strong>Spaces</strong><span>014</span></div></div>
-      <div class="gallery-card xwide" data-title="Street Art" data-number="006"><img src="images/public-1/public-1-06.webp" alt="Arte urbana"><div class="photo-info"><strong>Street Art</strong><span>006</span></div></div>
-      <div class="gallery-card medium" data-title="People" data-number="004"><img src="images/public-1/public-1-04.webp" alt="Retrato"><div class="photo-info"><strong>People</strong><span>004</span></div></div>
-    </div></div>
-
-    <div class="gallery-row row-5"><div class="gallery-track">
-      <div class="gallery-card medium" data-title="Event" data-number="005"><img src="images/public-1/public-1-05.webp" alt="Evento"><div class="photo-info"><strong>Event</strong><span>005</span></div></div>
-      <div class="gallery-card wide" data-title="Mural" data-number="008"><img src="images/public-1/public-1-08.webp" alt="Mural"><div class="photo-info"><strong>Mural</strong><span>008</span></div></div>
       <div class="gallery-card xwide" data-title="Spaces" data-number="002"><img src="images/public-1/public-1-02.webp" alt="Arquitetura e interiores"><div class="photo-info"><strong>Spaces</strong><span>002</span></div></div>
-      <div class="gallery-card vertical" data-title="Portrait" data-number="001"><img src="images/public-1/public-1-01.webp" alt="Retrato"><div class="photo-info"><strong>Portrait</strong><span>001</span></div></div>
-      <div class="gallery-card medium" data-title="Event" data-number="005"><img src="images/public-1/public-1-05.webp" alt="Evento"><div class="photo-info"><strong>Event</strong><span>005</span></div></div>
-      <div class="gallery-card wide" data-title="Mural" data-number="008"><img src="images/public-1/public-1-08.webp" alt="Mural"><div class="photo-info"><strong>Mural</strong><span>008</span></div></div>
+      <div class="gallery-card medium" data-title="Atmosphere" data-number="011"><img src="images/public-1/public-1-11.webp" alt="Ambiente"><div class="photo-info"><strong>Atmosphere</strong><span>011</span></div></div>
+      <div class="gallery-card vertical" data-title="Spaces" data-number="014"><img src="images/public-1/public-1-14.webp" alt="Arquitetura e interiores"><div class="photo-info"><strong>Spaces</strong><span>014</span></div></div>
       <div class="gallery-card xwide" data-title="Spaces" data-number="002"><img src="images/public-1/public-1-02.webp" alt="Arquitetura e interiores"><div class="photo-info"><strong>Spaces</strong><span>002</span></div></div>
-      <div class="gallery-card vertical" data-title="Portrait" data-number="001"><img src="images/public-1/public-1-01.webp" alt="Retrato"><div class="photo-info"><strong>Portrait</strong><span>001</span></div></div>
+      <div class="gallery-card medium" data-title="Atmosphere" data-number="011"><img src="images/public-1/public-1-11.webp" alt="Ambiente"><div class="photo-info"><strong>Atmosphere</strong><span>011</span></div></div>
+      <div class="gallery-card vertical" data-title="Spaces" data-number="014"><img src="images/public-1/public-1-14.webp" alt="Arquitetura e interiores"><div class="photo-info"><strong>Spaces</strong><span>014</span></div></div>
     </div></div>
   </div>
 </header>
@@ -301,7 +293,7 @@
   const nextPhoto = document.getElementById("nextPhoto");
   const prevPhoto = document.getElementById("prevPhoto");
   const albums = {
-    eventos: ["005", "011", "012", "003", "013"],
+    eventos: ["005", "011", "012"],
     arte: ["006", "008", "009"],
     retratos: ["001", "003", "004", "007", "010", "013"],
     spaces: ["002", "011", "014"]

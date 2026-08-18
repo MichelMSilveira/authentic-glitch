@@ -18,7 +18,6 @@
     img { display:block; }
     ::selection { background:var(--purple); color:white; }
     body::after { content:""; position:fixed; inset:0; pointer-events:none; z-index:9999; opacity:.027; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E"); }
-
     nav { width:100%; height:76px; position:fixed; top:0; left:0; padding:0 4vw; display:flex; justify-content:space-between; align-items:center; z-index:1000; background:linear-gradient(to bottom,rgba(8,8,8,.94),rgba(8,8,8,.55),transparent); }
     .nav-logo { font-family:"Inter",sans-serif; font-weight:600; font-size:.82rem; letter-spacing:.1em; text-transform:uppercase; }
     .nav-logo span { color:var(--purple-light); }
@@ -28,7 +27,6 @@
     .nav-social,.nav-auth { padding:10px 15px; border:1px solid rgba(255,255,255,.18); border-radius:100px; background:transparent; cursor:pointer; }
     .nav-social:hover,.nav-auth:hover { background:var(--purple); border-color:var(--purple); color:white !important; }
     .nav-auth.logged-in { border-color:rgba(196,147,255,.5); color:var(--purple-light); }
-
     .hero { min-height:100vh; padding-top:105px; overflow:hidden; }
     .hero-header { padding:0 4vw 38px; display:grid; grid-template-columns:1.25fr .75fr; gap:4vw; align-items:end; }
     .hero-title { font-family:"Inter",sans-serif; font-size:clamp(5.5rem,11vw,12rem); font-weight:600; line-height:.74; letter-spacing:-.09em; text-transform:uppercase; }
@@ -39,7 +37,6 @@
     .archive-label { font-family:"DM Mono"; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--purple-light); }
     .hero-description { margin-top:24px; max-width:620px; font-family:"DM Mono"; font-size:clamp(1.05rem,1.35vw,1.35rem); line-height:1.58; letter-spacing:.045em; text-transform:uppercase; color:#b8b3ad; }
     .hero-description strong { color:var(--white); font-weight:400; }
-
     .gallery-wall { display:flex; flex-direction:column; gap:9px; padding-bottom:45px; transform:rotate(-.35deg) scale(1.01); }
     .gallery-row { width:100%; position:relative; overflow:hidden; --duration:60s; }
     .gallery-track { width:max-content; display:flex; gap:9px; animation:move-left var(--duration) linear infinite; will-change:transform; }
@@ -62,12 +59,10 @@
     .photo-info strong,.photo-info span { font-family:"DM Mono"; font-size:.5rem; letter-spacing:.09em; text-transform:uppercase; }
     .photo-info strong { font-weight:400; }
     .photo-info span { color:var(--purple-light); }
-
     .intro { padding:12vw 5vw; display:grid; grid-template-columns:.45fr 1.55fr; gap:8vw; }
     .section-code { font-family:"DM Mono"; font-size:.56rem; letter-spacing:.14em; text-transform:uppercase; color:var(--purple-light); }
     .intro h2 { max-width:1250px; font-size:clamp(3.4rem,7vw,8rem); font-weight:400; line-height:.91; letter-spacing:-.07em; }
     .intro h2 em { font-family:"Playfair Display"; font-weight:500; color:var(--purple-light); }
-
     .shoot-gallery { padding:6vw 4vw 13vw; }
     .shoot-header { margin-bottom:50px; display:flex; justify-content:space-between; align-items:flex-end; gap:50px; }
     .shoot-header h2 { margin-top:14px; font-size:clamp(3.5rem,7vw,7.5rem); font-weight:400; line-height:.84; letter-spacing:-.075em; }
@@ -84,11 +79,9 @@
     .shoot-overlay h3 { font-size:clamp(1.8rem,3vw,3.3rem); font-weight:400; line-height:.9; letter-spacing:-.055em; }
     .shoot-overlay small { display:block; margin-top:15px; font-family:"DM Mono"; font-size:.49rem; letter-spacing:.13em; color:#aaa; opacity:0; transform:translateY(7px); transition:.3s; }
     .shoot-card:hover small { opacity:1; transform:translateY(0); color:var(--purple-light); }
-
     .statement { min-height:90vh; padding:9vw 5vw; display:flex; align-items:center; }
     .statement p { max-width:1400px; font-size:clamp(4rem,10vw,11rem); font-weight:500; line-height:.78; letter-spacing:-.09em; text-transform:uppercase; }
     .statement em { font-family:"Playfair Display"; font-weight:500; color:var(--purple-light); text-transform:none; }
-
     .contact { min-height:100vh; padding:7vw 5vw 4vw; display:flex; flex-direction:column; justify-content:space-between; background:var(--purple); color:#090909; }
     .contact-top { display:flex; justify-content:space-between; font-family:"DM Mono"; font-size:.62rem; letter-spacing:.12em; text-transform:uppercase; }
     .contact-title { margin:60px 0; font-size:clamp(6rem,15vw,16rem); font-weight:500; line-height:.67; letter-spacing:-.105em; text-transform:uppercase; }
@@ -99,7 +92,6 @@
     .contact-link .contact-icon { font-size:1.25rem; }
     .contact-link:hover { background:#090909; color:var(--purple-light); }
     .contact-credit { font-family:"DM Mono"; font-size:.61rem; line-height:1.9; text-align:right; text-transform:uppercase; }
-
     .lightbox { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(5,5,5,.97); z-index:5000; opacity:0; visibility:hidden; transition:opacity .35s,visibility .35s; }
     .lightbox.active { opacity:1; visibility:visible; }
     .lightbox-image-wrap { width:min(86vw,1300px); height:82vh; display:flex; align-items:center; justify-content:center; }
@@ -110,7 +102,6 @@
     .lightbox-prev{left:25px}.lightbox-next{right:25px}
     .lightbox-caption { position:absolute; bottom:22px; left:50%; transform:translateX(-50%); font-family:"DM Mono"; font-size:.54rem; letter-spacing:.1em; text-transform:uppercase; color:#aaa; }
     .lightbox-caption span { color:var(--purple-light); }
-
     @media(max-width:850px) {
       nav { height:66px; padding:0 5vw; }
       .nav-menu { gap:8px; }
@@ -152,7 +143,6 @@
     <a href="#gallery">Gallery</a>
     <a href="#services">Services</a>
     <a href="https://instagram.com/" target="_blank" class="nav-social">Instagram ↗</a>
-    <a href="https://wa.me/5511999999999" target="_blank" class="nav-social">WhatsApp ↗</a>
     <button type="button" class="nav-auth" id="authButton">Entrar com Google</button>
   </div>
 </nav>
@@ -168,58 +158,58 @@
 
   <div class="gallery-wall">
     <div class="gallery-row row-1"><div class="gallery-track">
-      <div class="gallery-card wide" data-title="Street Culture" data-number="001"><img src="https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=1200&q=90" alt=""><div class="photo-info"><strong>Street Culture</strong><span>001</span></div></div>
-      <div class="gallery-card vertical" data-title="Portrait" data-number="002"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=700&q=90" alt=""><div class="photo-info"><strong>Portrait</strong><span>002</span></div></div>
-      <div class="gallery-card medium" data-title="Culture" data-number="003"><img src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?auto=format&fit=crop&w=900&q=90" alt=""><div class="photo-info"><strong>Culture</strong><span>003</span></div></div>
-      <div class="gallery-card xwide" data-title="Live" data-number="004"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1500&q=90" alt=""><div class="photo-info"><strong>Live</strong><span>004</span></div></div>
-      <div class="gallery-card wide" data-title="Street Culture" data-number="001"><img src="https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=1200&q=90" alt=""><div class="photo-info"><strong>Street Culture</strong><span>001</span></div></div>
-      <div class="gallery-card vertical" data-title="Portrait" data-number="002"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=700&q=90" alt=""><div class="photo-info"><strong>Portrait</strong><span>002</span></div></div>
-      <div class="gallery-card medium" data-title="Culture" data-number="003"><img src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?auto=format&fit=crop&w=900&q=90" alt=""><div class="photo-info"><strong>Culture</strong><span>003</span></div></div>
-      <div class="gallery-card xwide" data-title="Live" data-number="004"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1500&q=90" alt=""><div class="photo-info"><strong>Live</strong><span>004</span></div></div>
+      <div class="gallery-card vertical" data-title="Portrait" data-number="001"><img src="images/public-1/public-1-01.webp" alt="Retrato"><div class="photo-info"><strong>Portrait</strong><span>001</span></div></div>
+      <div class="gallery-card xwide" data-title="Spaces" data-number="002"><img src="images/public-1/public-1-02.webp" alt="Arquitetura e interiores"><div class="photo-info"><strong>Spaces</strong><span>002</span></div></div>
+      <div class="gallery-card wide" data-title="Portrait" data-number="003"><img src="images/public-1/public-1-03.webp" alt="Retrato"><div class="photo-info"><strong>Portrait</strong><span>003</span></div></div>
+      <div class="gallery-card medium" data-title="People" data-number="004"><img src="images/public-1/public-1-04.webp" alt="Retrato"><div class="photo-info"><strong>People</strong><span>004</span></div></div>
+      <div class="gallery-card vertical" data-title="Portrait" data-number="001"><img src="images/public-1/public-1-01.webp" alt="Retrato"><div class="photo-info"><strong>Portrait</strong><span>001</span></div></div>
+      <div class="gallery-card xwide" data-title="Spaces" data-number="002"><img src="images/public-1/public-1-02.webp" alt="Arquitetura e interiores"><div class="photo-info"><strong>Spaces</strong><span>002</span></div></div>
+      <div class="gallery-card wide" data-title="Portrait" data-number="003"><img src="images/public-1/public-1-03.webp" alt="Retrato"><div class="photo-info"><strong>Portrait</strong><span>003</span></div></div>
+      <div class="gallery-card medium" data-title="People" data-number="004"><img src="images/public-1/public-1-04.webp" alt="Retrato"><div class="photo-info"><strong>People</strong><span>004</span></div></div>
     </div></div>
 
     <div class="gallery-row reverse row-2"><div class="gallery-track">
-      <div class="gallery-card vertical" data-title="Personal" data-number="005"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=700&q=90" alt=""><div class="photo-info"><strong>Personal</strong><span>005</span></div></div>
-      <div class="gallery-card xwide" data-title="Events" data-number="006"><img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1500&q=90" alt=""><div class="photo-info"><strong>Events</strong><span>006</span></div></div>
-      <div class="gallery-card medium" data-title="Architecture" data-number="007"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=90" alt=""><div class="photo-info"><strong>Architecture</strong><span>007</span></div></div>
-      <div class="gallery-card wide" data-title="Editorial" data-number="008"><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=90" alt=""><div class="photo-info"><strong>Editorial</strong><span>008</span></div></div>
-      <div class="gallery-card vertical" data-title="Personal" data-number="005"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=700&q=90" alt=""><div class="photo-info"><strong>Personal</strong><span>005</span></div></div>
-      <div class="gallery-card xwide" data-title="Events" data-number="006"><img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1500&q=90" alt=""><div class="photo-info"><strong>Events</strong><span>006</span></div></div>
-      <div class="gallery-card medium" data-title="Architecture" data-number="007"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=90" alt=""><div class="photo-info"><strong>Architecture</strong><span>007</span></div></div>
-      <div class="gallery-card wide" data-title="Editorial" data-number="008"><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=90" alt=""><div class="photo-info"><strong>Editorial</strong><span>008</span></div></div>
+      <div class="gallery-card wide" data-title="Event" data-number="005"><img src="images/public-1/public-1-05.webp" alt="Evento"><div class="photo-info"><strong>Event</strong><span>005</span></div></div>
+      <div class="gallery-card xwide" data-title="Street Art" data-number="006"><img src="images/public-1/public-1-06.webp" alt="Arte urbana"><div class="photo-info"><strong>Street Art</strong><span>006</span></div></div>
+      <div class="gallery-card medium" data-title="Portrait" data-number="007"><img src="images/public-1/public-1-07.webp" alt="Retrato"><div class="photo-info"><strong>Portrait</strong><span>007</span></div></div>
+      <div class="gallery-card xwide" data-title="Mural" data-number="008"><img src="images/public-1/public-1-08.webp" alt="Mural"><div class="photo-info"><strong>Mural</strong><span>008</span></div></div>
+      <div class="gallery-card wide" data-title="Event" data-number="005"><img src="images/public-1/public-1-05.webp" alt="Evento"><div class="photo-info"><strong>Event</strong><span>005</span></div></div>
+      <div class="gallery-card xwide" data-title="Street Art" data-number="006"><img src="images/public-1/public-1-06.webp" alt="Arte urbana"><div class="photo-info"><strong>Street Art</strong><span>006</span></div></div>
+      <div class="gallery-card medium" data-title="Portrait" data-number="007"><img src="images/public-1/public-1-07.webp" alt="Retrato"><div class="photo-info"><strong>Portrait</strong><span>007</span></div></div>
+      <div class="gallery-card xwide" data-title="Mural" data-number="008"><img src="images/public-1/public-1-08.webp" alt="Mural"><div class="photo-info"><strong>Mural</strong><span>008</span></div></div>
     </div></div>
 
     <div class="gallery-row row-3"><div class="gallery-track">
-      <div class="gallery-card xwide" data-title="Public Events" data-number="009"><img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1500&q=90" alt=""><div class="photo-info"><strong>Public Events</strong><span>009</span></div></div>
-      <div class="gallery-card vertical" data-title="Portrait" data-number="010"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=700&q=90" alt=""><div class="photo-info"><strong>Portrait</strong><span>010</span></div></div>
-      <div class="gallery-card wide" data-title="Spaces" data-number="011"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1300&q=90" alt=""><div class="photo-info"><strong>Spaces</strong><span>011</span></div></div>
-      <div class="gallery-card medium" data-title="Art" data-number="012"><img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1000&q=90" alt=""><div class="photo-info"><strong>Art</strong><span>012</span></div></div>
-      <div class="gallery-card xwide" data-title="Public Events" data-number="009"><img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1500&q=90" alt=""><div class="photo-info"><strong>Public Events</strong><span>009</span></div></div>
-      <div class="gallery-card vertical" data-title="Portrait" data-number="010"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=700&q=90" alt=""><div class="photo-info"><strong>Portrait</strong><span>010</span></div></div>
-      <div class="gallery-card wide" data-title="Spaces" data-number="011"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1300&q=90" alt=""><div class="photo-info"><strong>Spaces</strong><span>011</span></div></div>
-      <div class="gallery-card medium" data-title="Art" data-number="012"><img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1000&q=90" alt=""><div class="photo-info"><strong>Art</strong><span>012</span></div></div>
+      <div class="gallery-card xwide" data-title="Street Art" data-number="009"><img src="images/public-1/public-1-09.webp" alt="Arte urbana"><div class="photo-info"><strong>Street Art</strong><span>009</span></div></div>
+      <div class="gallery-card wide" data-title="Portrait" data-number="010"><img src="images/public-1/public-1-10.webp" alt="Retrato"><div class="photo-info"><strong>Portrait</strong><span>010</span></div></div>
+      <div class="gallery-card medium" data-title="Atmosphere" data-number="011"><img src="images/public-1/public-1-11.webp" alt="Ambiente"><div class="photo-info"><strong>Atmosphere</strong><span>011</span></div></div>
+      <div class="gallery-card wide" data-title="Event Detail" data-number="012"><img src="images/public-1/public-1-12.webp" alt="Detalhe de evento"><div class="photo-info"><strong>Event Detail</strong><span>012</span></div></div>
+      <div class="gallery-card xwide" data-title="Street Art" data-number="009"><img src="images/public-1/public-1-09.webp" alt="Arte urbana"><div class="photo-info"><strong>Street Art</strong><span>009</span></div></div>
+      <div class="gallery-card wide" data-title="Portrait" data-number="010"><img src="images/public-1/public-1-10.webp" alt="Retrato"><div class="photo-info"><strong>Portrait</strong><span>010</span></div></div>
+      <div class="gallery-card medium" data-title="Atmosphere" data-number="011"><img src="images/public-1/public-1-11.webp" alt="Ambiente"><div class="photo-info"><strong>Atmosphere</strong><span>011</span></div></div>
+      <div class="gallery-card wide" data-title="Event Detail" data-number="012"><img src="images/public-1/public-1-12.webp" alt="Detalhe de evento"><div class="photo-info"><strong>Event Detail</strong><span>012</span></div></div>
     </div></div>
 
     <div class="gallery-row reverse row-4"><div class="gallery-track">
-      <div class="gallery-card wide" data-title="Lifestyle" data-number="013"><img src="https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?auto=format&fit=crop&w=1200&q=90" alt=""><div class="photo-info"><strong>Lifestyle</strong><span>013</span></div></div>
-      <div class="gallery-card medium" data-title="Interiors" data-number="014"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=90" alt=""><div class="photo-info"><strong>Interiors</strong><span>014</span></div></div>
-      <div class="gallery-card vertical" data-title="Portrait" data-number="015"><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=700&q=90" alt=""><div class="photo-info"><strong>Portrait</strong><span>015</span></div></div>
-      <div class="gallery-card xwide" data-title="Culture" data-number="016"><img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1500&q=90" alt=""><div class="photo-info"><strong>Culture</strong><span>016</span></div></div>
-      <div class="gallery-card wide" data-title="Lifestyle" data-number="013"><img src="https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?auto=format&fit=crop&w=1200&q=90" alt=""><div class="photo-info"><strong>Lifestyle</strong><span>013</span></div></div>
-      <div class="gallery-card medium" data-title="Interiors" data-number="014"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=90" alt=""><div class="photo-info"><strong>Interiors</strong><span>014</span></div></div>
-      <div class="gallery-card vertical" data-title="Portrait" data-number="015"><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=700&q=90" alt=""><div class="photo-info"><strong>Portrait</strong><span>015</span></div></div>
-      <div class="gallery-card xwide" data-title="Culture" data-number="016"><img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1500&q=90" alt=""><div class="photo-info"><strong>Culture</strong><span>016</span></div></div>
+      <div class="gallery-card wide" data-title="Portrait" data-number="013"><img src="images/public-1/public-1-13.webp" alt="Retrato"><div class="photo-info"><strong>Portrait</strong><span>013</span></div></div>
+      <div class="gallery-card vertical" data-title="Spaces" data-number="014"><img src="images/public-1/public-1-14.webp" alt="Arquitetura e interiores"><div class="photo-info"><strong>Spaces</strong><span>014</span></div></div>
+      <div class="gallery-card xwide" data-title="Street Art" data-number="006"><img src="images/public-1/public-1-06.webp" alt="Arte urbana"><div class="photo-info"><strong>Street Art</strong><span>006</span></div></div>
+      <div class="gallery-card medium" data-title="People" data-number="004"><img src="images/public-1/public-1-04.webp" alt="Retrato"><div class="photo-info"><strong>People</strong><span>004</span></div></div>
+      <div class="gallery-card wide" data-title="Portrait" data-number="013"><img src="images/public-1/public-1-13.webp" alt="Retrato"><div class="photo-info"><strong>Portrait</strong><span>013</span></div></div>
+      <div class="gallery-card vertical" data-title="Spaces" data-number="014"><img src="images/public-1/public-1-14.webp" alt="Arquitetura e interiores"><div class="photo-info"><strong>Spaces</strong><span>014</span></div></div>
+      <div class="gallery-card xwide" data-title="Street Art" data-number="006"><img src="images/public-1/public-1-06.webp" alt="Arte urbana"><div class="photo-info"><strong>Street Art</strong><span>006</span></div></div>
+      <div class="gallery-card medium" data-title="People" data-number="004"><img src="images/public-1/public-1-04.webp" alt="Retrato"><div class="photo-info"><strong>People</strong><span>004</span></div></div>
     </div></div>
 
     <div class="gallery-row row-5"><div class="gallery-track">
-      <div class="gallery-card medium" data-title="Private Commission" data-number="017"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=90" alt=""><div class="photo-info"><strong>Private</strong><span>017</span></div></div>
-      <div class="gallery-card xwide" data-title="Architecture" data-number="018"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=90" alt=""><div class="photo-info"><strong>Architecture</strong><span>018</span></div></div>
-      <div class="gallery-card wide" data-title="Live" data-number="019"><img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1200&q=90" alt=""><div class="photo-info"><strong>Live</strong><span>019</span></div></div>
-      <div class="gallery-card vertical" data-title="People" data-number="020"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=700&q=90" alt=""><div class="photo-info"><strong>People</strong><span>020</span></div></div>
-      <div class="gallery-card medium" data-title="Private Commission" data-number="017"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=90" alt=""><div class="photo-info"><strong>Private</strong><span>017</span></div></div>
-      <div class="gallery-card xwide" data-title="Architecture" data-number="018"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=90" alt=""><div class="photo-info"><strong>Architecture</strong><span>018</span></div></div>
-      <div class="gallery-card wide" data-title="Live" data-number="019"><img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1200&q=90" alt=""><div class="photo-info"><strong>Live</strong><span>019</span></div></div>
-      <div class="gallery-card vertical" data-title="People" data-number="020"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=700&q=90" alt=""><div class="photo-info"><strong>People</strong><span>020</span></div></div>
+      <div class="gallery-card medium" data-title="Event" data-number="005"><img src="images/public-1/public-1-05.webp" alt="Evento"><div class="photo-info"><strong>Event</strong><span>005</span></div></div>
+      <div class="gallery-card wide" data-title="Mural" data-number="008"><img src="images/public-1/public-1-08.webp" alt="Mural"><div class="photo-info"><strong>Mural</strong><span>008</span></div></div>
+      <div class="gallery-card xwide" data-title="Spaces" data-number="002"><img src="images/public-1/public-1-02.webp" alt="Arquitetura e interiores"><div class="photo-info"><strong>Spaces</strong><span>002</span></div></div>
+      <div class="gallery-card vertical" data-title="Portrait" data-number="001"><img src="images/public-1/public-1-01.webp" alt="Retrato"><div class="photo-info"><strong>Portrait</strong><span>001</span></div></div>
+      <div class="gallery-card medium" data-title="Event" data-number="005"><img src="images/public-1/public-1-05.webp" alt="Evento"><div class="photo-info"><strong>Event</strong><span>005</span></div></div>
+      <div class="gallery-card wide" data-title="Mural" data-number="008"><img src="images/public-1/public-1-08.webp" alt="Mural"><div class="photo-info"><strong>Mural</strong><span>008</span></div></div>
+      <div class="gallery-card xwide" data-title="Spaces" data-number="002"><img src="images/public-1/public-1-02.webp" alt="Arquitetura e interiores"><div class="photo-info"><strong>Spaces</strong><span>002</span></div></div>
+      <div class="gallery-card vertical" data-title="Portrait" data-number="001"><img src="images/public-1/public-1-01.webp" alt="Retrato"><div class="photo-info"><strong>Portrait</strong><span>001</span></div></div>
     </div></div>
   </div>
 </header>
@@ -228,35 +218,30 @@
   <div class="section-code">02 / Studio</div>
   <h2>Photography at the intersection of <em>culture, people, art</em> and spaces.</h2>
 </section>
-
 <section class="shoot-gallery" id="services">
   <div class="shoot-header">
     <div><div class="section-code">03 / Services</div><h2>What we shoot.</h2></div>
     <p>Eventos, cultura,<br>pessoas e espaços.<br><br>Diferentes histórias.<br>O mesmo olhar.</p>
   </div>
   <div class="shoot-grid">
-    <a href="#contact" class="shoot-card"><img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1000&q=90" alt="Eventos"><div class="shoot-overlay"><span>01</span><div><h3>Eventos</h3><small>VIEW ↗</small></div></div></a>
-    <a href="#contact" class="shoot-card"><img src="https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=1000&q=90" alt="Arte e Cultura"><div class="shoot-overlay"><span>02</span><div><h3>Arte &<br>Cultura</h3><small>VIEW ↗</small></div></div></a>
-    <a href="#contact" class="shoot-card"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1000&q=90" alt="Retratos"><div class="shoot-overlay"><span>03</span><div><h3>Retratos</h3><small>VIEW ↗</small></div></div></a>
-    <a href="#contact" class="shoot-card"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=90" alt="Spaces"><div class="shoot-overlay"><span>04</span><div><h3>Spaces</h3><small>VIEW ↗</small></div></div></a>
+    <a href="#contact" class="shoot-card"><img src="images/public-1/public-1-05.webp" alt="Eventos"><div class="shoot-overlay"><span>01</span><div><h3>Eventos</h3><small>VIEW ↗</small></div></div></a>
+    <a href="#contact" class="shoot-card"><img src="images/public-1/public-1-06.webp" alt="Arte e Cultura"><div class="shoot-overlay"><span>02</span><div><h3>Arte &<br>Cultura</h3><small>VIEW ↗</small></div></div></a>
+    <a href="#contact" class="shoot-card"><img src="images/public-1/public-1-10.webp" alt="Retratos"><div class="shoot-overlay"><span>03</span><div><h3>Retratos</h3><small>VIEW ↗</small></div></div></a>
+    <a href="#contact" class="shoot-card"><img src="images/public-1/public-1-14.webp" alt="Spaces"><div class="shoot-overlay"><span>04</span><div><h3>Spaces</h3><small>VIEW ↗</small></div></div></a>
   </div>
 </section>
-
 <section class="statement"><p>Document the real. <em>Frame the unexpected.</em></p></section>
-
 <section class="contact" id="contact">
   <div class="contact-top"><span>04 / Contact</span><span>São Paulo — Brasil</span></div>
   <div class="contact-title">CALL ME<em>MAYBE.</em></div>
   <div class="contact-bottom">
     <div class="contact-links">
-      <a href="https://wa.me/5511999999999" target="_blank" class="contact-link"><span class="contact-icon">◉</span>WhatsApp ↗</a>
       <a href="https://instagram.com/" target="_blank" class="contact-link"><span class="contact-icon">◎</span>Instagram ↗</a>
       <a href="mailto:authenticglitchstudio@gmail.com" class="contact-link"><span class="contact-icon">✉</span>E-mail ↗</a>
     </div>
     <div class="contact-credit">AUTHENTIC GLITCH®<br>PHOTOGRAPHY STUDIO<br>EVENTS / ART / CULTURE<br>PORTRAITS / SPACES<br><br>SÃO PAULO — BRASIL<br>© 2026</div>
   </div>
 </section>
-
 <div class="lightbox" id="lightbox">
   <button class="lightbox-close" id="closeLightbox">Close ×</button>
   <button class="lightbox-nav lightbox-prev" id="prevPhoto">←</button>
@@ -264,7 +249,6 @@
   <button class="lightbox-nav lightbox-next" id="nextPhoto">→</button>
   <div class="lightbox-caption" id="lightboxCaption"></div>
 </div>
-
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
   const SUPABASE_URL = "https://tfzpnaasdgxwnjykeqgj.supabase.co";
@@ -272,7 +256,6 @@
   const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
   const authButton = document.getElementById("authButton");
   let currentUser = null;
-
   function updateAuthButton(user) {
     currentUser = user || null;
     if (!currentUser) {
@@ -281,7 +264,6 @@
       authButton.title = "Entrar com Google";
       return;
     }
-
     const meta = currentUser.user_metadata || {};
     const displayName = meta.full_name || meta.name || currentUser.email || "Conta";
     const firstName = displayName.split(" ")[0];
@@ -289,39 +271,18 @@
     authButton.classList.add("logged-in");
     authButton.title = currentUser.email || "Usuário autenticado";
   }
-
   async function signInWithGoogle() {
     const redirectTo = `${window.location.origin}${window.location.pathname}`;
-    const { error } = await supabaseClient.auth.signInWithOAuth({
-      provider: "google",
-      options: { redirectTo }
-    });
-    if (error) {
-      console.error("Google login error:", error);
-      alert("Não foi possível iniciar o login com Google. Tente novamente.");
-    }
+    const { error } = await supabaseClient.auth.signInWithOAuth({ provider:"google", options:{ redirectTo } });
+    if (error) { console.error("Google login error:", error); alert("Não foi possível iniciar o login com Google. Tente novamente."); }
   }
-
   async function signOut() {
     const { error } = await supabaseClient.auth.signOut();
-    if (error) {
-      console.error("Logout error:", error);
-      alert("Não foi possível sair da conta. Tente novamente.");
-    }
+    if (error) { console.error("Logout error:", error); alert("Não foi possível sair da conta. Tente novamente."); }
   }
-
-  authButton.addEventListener("click", async () => {
-    if (currentUser) await signOut();
-    else await signInWithGoogle();
-  });
-
-  supabaseClient.auth.getSession().then(({ data }) => {
-    updateAuthButton(data.session?.user || null);
-  });
-
-  supabaseClient.auth.onAuthStateChange((_event, session) => {
-    updateAuthButton(session?.user || null);
-  });
+  authButton.addEventListener("click", async () => { if (currentUser) await signOut(); else await signInWithGoogle(); });
+  supabaseClient.auth.getSession().then(({ data }) => updateAuthButton(data.session?.user || null));
+  supabaseClient.auth.onAuthStateChange((_event, session) => updateAuthButton(session?.user || null));
 
   const cards = [...document.querySelectorAll(".gallery-card")];
   const uniquePhotos = [];
@@ -333,7 +294,6 @@
       uniquePhotos.push({ src:card.querySelector("img").src, title:card.dataset.title, number });
     }
   });
-
   const lightbox = document.getElementById("lightbox");
   const lightboxImage = document.getElementById("lightboxImage");
   const lightboxCaption = document.getElementById("lightboxCaption");
@@ -341,7 +301,6 @@
   const nextPhoto = document.getElementById("nextPhoto");
   const prevPhoto = document.getElementById("prevPhoto");
   let currentIndex = 0;
-
   function showPhoto(index) {
     if (index < 0) index = uniquePhotos.length - 1;
     if (index >= uniquePhotos.length) index = 0;
@@ -354,7 +313,6 @@
       lightboxImage.style.opacity = "1";
     }, 100);
   }
-
   cards.forEach(card => {
     card.addEventListener("click", () => {
       const number = card.dataset.number;
@@ -364,12 +322,7 @@
       document.body.classList.add("no-scroll");
     });
   });
-
-  function closeBox() {
-    lightbox.classList.remove("active");
-    document.body.classList.remove("no-scroll");
-  }
-
+  function closeBox() { lightbox.classList.remove("active"); document.body.classList.remove("no-scroll"); }
   closeLightbox.addEventListener("click", closeBox);
   nextPhoto.addEventListener("click", () => showPhoto(currentIndex + 1));
   prevPhoto.addEventListener("click", () => showPhoto(currentIndex - 1));

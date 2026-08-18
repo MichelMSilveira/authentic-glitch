@@ -224,10 +224,10 @@
     <p>Eventos, cultura,<br>pessoas e espaços.<br><br>Diferentes histórias.<br>O mesmo olhar.</p>
   </div>
   <div class="shoot-grid">
-    <a href="#contact" class="shoot-card"><img src="images/public-1/public-1-05.webp" alt="Eventos"><div class="shoot-overlay"><span>01</span><div><h3>Eventos</h3><small>VIEW ↗</small></div></div></a>
-    <a href="#contact" class="shoot-card"><img src="images/public-1/public-1-06.webp" alt="Arte e Cultura"><div class="shoot-overlay"><span>02</span><div><h3>Arte &<br>Cultura</h3><small>VIEW ↗</small></div></div></a>
-    <a href="#contact" class="shoot-card"><img src="images/public-1/public-1-10.webp" alt="Retratos"><div class="shoot-overlay"><span>03</span><div><h3>Retratos</h3><small>VIEW ↗</small></div></div></a>
-    <a href="#contact" class="shoot-card"><img src="images/public-1/public-1-14.webp" alt="Spaces"><div class="shoot-overlay"><span>04</span><div><h3>Spaces</h3><small>VIEW ↗</small></div></div></a>
+    <a href="#" class="shoot-card" data-album="eventos"><img src="images/public-1/public-1-05.webp" alt="Eventos"><div class="shoot-overlay"><span>01</span><div><h3>Eventos</h3><small>VIEW ↗</small></div></div></a>
+    <a href="#" class="shoot-card" data-album="arte"><img src="images/public-1/public-1-06.webp" alt="Arte e Cultura"><div class="shoot-overlay"><span>02</span><div><h3>Arte &<br>Cultura</h3><small>VIEW ↗</small></div></div></a>
+    <a href="#" class="shoot-card" data-album="retratos"><img src="images/public-1/public-1-10.webp" alt="Retratos"><div class="shoot-overlay"><span>03</span><div><h3>Retratos</h3><small>VIEW ↗</small></div></div></a>
+    <a href="#" class="shoot-card" data-album="spaces"><img src="images/public-1/public-1-14.webp" alt="Spaces"><div class="shoot-overlay"><span>04</span><div><h3>Spaces</h3><small>VIEW ↗</small></div></div></a>
   </div>
 </section>
 <section class="statement"><p>Document the real. <em>Frame the unexpected.</em></p></section>
@@ -300,12 +300,19 @@
   const closeLightbox = document.getElementById("closeLightbox");
   const nextPhoto = document.getElementById("nextPhoto");
   const prevPhoto = document.getElementById("prevPhoto");
+  const albums = {
+    eventos: ["005", "011", "012", "003", "013"],
+    arte: ["006", "008", "009"],
+    retratos: ["001", "003", "004", "007", "010", "013"],
+    spaces: ["002", "011", "014"]
+  };
+  let activePhotos = uniquePhotos;
   let currentIndex = 0;
   function showPhoto(index) {
-    if (index < 0) index = uniquePhotos.length - 1;
-    if (index >= uniquePhotos.length) index = 0;
+    if (index < 0) index = activePhotos.length - 1;
+    if (index >= activePhotos.length) index = 0;
     currentIndex = index;
-    const photo = uniquePhotos[currentIndex];
+    const photo = activePhotos[currentIndex];
     lightboxImage.style.opacity = "0";
     setTimeout(() => {
       lightboxImage.src = photo.src;
@@ -315,8 +322,21 @@
   }
   cards.forEach(card => {
     card.addEventListener("click", () => {
+      activePhotos = uniquePhotos;
       const number = card.dataset.number;
-      currentIndex = uniquePhotos.findIndex(photo => photo.number === number);
+      currentIndex = activePhotos.findIndex(photo => photo.number === number);
+      showPhoto(currentIndex);
+      lightbox.classList.add("active");
+      document.body.classList.add("no-scroll");
+    });
+  });
+  document.querySelectorAll(".shoot-card[data-album]").forEach(card => {
+    card.addEventListener("click", event => {
+      event.preventDefault();
+      const numbers = albums[card.dataset.album] || [];
+      activePhotos = numbers.map(number => uniquePhotos.find(photo => photo.number === number)).filter(Boolean);
+      if (!activePhotos.length) return;
+      currentIndex = 0;
       showPhoto(currentIndex);
       lightbox.classList.add("active");
       document.body.classList.add("no-scroll");

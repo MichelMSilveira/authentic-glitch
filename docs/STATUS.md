@@ -18,4 +18,4 @@ Auditar o `index.html` atual e registrar:
 ## Pendencias
 - confirmar hosting e dominio atuais;
 - registrar fluxo de deploy;
-- criar `docs/SESSION.md` ao encerrar a proxima sessao relevante.
+- revisar `docs/SESSION.md` ao encerrar a próxima sessão relevante.

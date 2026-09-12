@@ -4,6 +4,32 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Authentic Glitch® — Photography Studio</title>
 <meta name="description" content="Authentic Glitch — Photography Studio. Eventos, arte, cultura, retratos e espaços.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#080808">
+<link rel="canonical" href="https://michelmsilveira.github.io/authentic-glitch/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Authentic Glitch®">
+<meta property="og:title" content="Authentic Glitch® — Photography Studio">
+<meta property="og:description" content="Eventos, arte, cultura, retratos e espaços em São Paulo — Brasil.">
+<meta property="og:url" content="https://michelmsilveira.github.io/authentic-glitch/">
+<meta property="og:image" content="https://michelmsilveira.github.io/authentic-glitch/images/public-1/public-1-16.jpeg">
+<meta property="og:image:alt" content="Portfólio fotográfico da Authentic Glitch">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Authentic Glitch® — Photography Studio">
+<meta name="twitter:description" content="Eventos, arte, cultura, retratos e espaços em São Paulo — Brasil.">
+<meta name="twitter:image" content="https://michelmsilveira.github.io/authentic-glitch/images/public-1/public-1-16.jpeg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Authentic Glitch®",
+  "url": "https://michelmsilveira.github.io/authentic-glitch/",
+  "description": "Authentic Glitch — Photography Studio. Eventos, arte, cultura, retratos e espaços.",
+  "inLanguage": "pt-BR",
+  "sameAs": ["https://www.instagram.com/authentic_glitch/"]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
 <style>
@@ -43,7 +69,7 @@
 <div class="lightbox" id="lightbox"><button class="lightbox-close" id="closeLightbox">Close ×</button><button class="lightbox-nav lightbox-prev" id="prevPhoto">←</button><div class="lightbox-image-wrap"><img id="lightboxImage" src="" alt=""></div><button class="lightbox-nav lightbox-next" id="nextPhoto">→</button><div class="lightbox-caption" id="lightboxCaption"></div></div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-const SUPABASE_URL="https://tfzpnaasdgxwnjykeqgj.supabase.co",SUPABASE_PUBLISHABLE_KEY="sb_publishable_huJ_7hdxupJS_pHW9N0twQ_Md4jMXZA";const supabaseClient=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY),authButton=document.getElementById("authButton"),downloadButton=document.getElementById("downloadButton"),downloadMenu=document.querySelector(".download-menu");let currentUser=null;function updateAuthButton(user){currentUser=user||null;if(!currentUser){authButton.textContent="Entrar com Google";authButton.classList.remove("logged-in");downloadMenu.classList.remove("unlocked");downloadButton.title="Fa�a login com Google para acessar";return}downloadMenu.classList.add("unlocked");downloadButton.title="Acessar downloads";const meta=currentUser.user_metadata||{},displayName=meta.full_name||meta.name||currentUser.email||"Conta";authButton.textContent=`${displayName.split(" ")[0]} / Sair`;authButton.classList.add("logged-in")}async function signInWithGoogle(){const redirectTo=`${window.location.origin}${window.location.pathname}`;const{error}=await supabaseClient.auth.signInWithOAuth({provider:"google",options:{redirectTo}});if(error)alert("Não foi possível iniciar o login com Google. Tente novamente.")}async function signOut(){const{error}=await supabaseClient.auth.signOut();if(error)alert("Não foi possível sair da conta. Tente novamente.")}authButton.addEventListener("click",async()=>currentUser?await signOut():await signInWithGoogle());downloadButton.addEventListener("click",()=>{if(!currentUser){alert("Fa�a login com Google para acessar os downloads.");}});supabaseClient.auth.getSession().then(({data})=>updateAuthButton(data.session?.user||null));supabaseClient.auth.onAuthStateChange((_event,session)=>updateAuthButton(session?.user||null));
+const SUPABASE_URL="https://tfzpnaasdgxwnjykeqgj.supabase.co",SUPABASE_PUBLISHABLE_KEY="sb_publishable_huJ_7hdxupJS_pHW9N0twQ_Md4jMXZA";const supabaseClient=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY),authButton=document.getElementById("authButton"),downloadButton=document.getElementById("downloadButton"),downloadMenu=document.querySelector(".download-menu");let currentUser=null;function updateAuthButton(user){currentUser=user||null;if(!currentUser){authButton.textContent="Entrar com Google";authButton.classList.remove("logged-in");downloadMenu.classList.remove("unlocked");downloadButton.title="Faça login com Google para acessar";return}downloadMenu.classList.add("unlocked");downloadButton.title="Acessar downloads";const meta=currentUser.user_metadata||{},displayName=meta.full_name||meta.name||currentUser.email||"Conta";authButton.textContent=`${displayName.split(" ")[0]} / Sair`;authButton.classList.add("logged-in")}async function signInWithGoogle(){try{const redirectTo=`${window.location.origin}${window.location.pathname}`;const{error}=await supabaseClient.auth.signInWithOAuth({provider:"google",options:{redirectTo}});if(error)throw error}catch(error){console.error("Falha no login com Google",error);alert("O login com Google está temporariamente indisponível. Tente novamente mais tarde.")}}async function signOut(){try{const{error}=await supabaseClient.auth.signOut();if(error)throw error}catch(error){console.error("Falha ao sair",error);alert("Não foi possível sair da conta. Tente novamente.")}}authButton.addEventListener("click",async()=>currentUser?await signOut():await signInWithGoogle());downloadButton.addEventListener("click",()=>{if(!currentUser){alert("Faça login com Google para acessar os downloads.");}});supabaseClient.auth.getSession().then(({data})=>updateAuthButton(data.session?.user||null)).catch(error=>{console.error("Serviço de autenticação indisponível",error);authButton.title="Login com Google indisponível no momento"});supabaseClient.auth.onAuthStateChange((_event,session)=>updateAuthButton(session?.user||null));
 document.querySelectorAll(".gallery-card img,.shoot-card img,#lightboxImage,.album-option img").forEach(img=>{img.draggable=false;img.addEventListener("dragstart",e=>e.preventDefault());img.addEventListener("contextmenu",e=>e.preventDefault())});document.addEventListener("contextmenu",e=>{if(e.target.closest(".gallery-card,.shoot-card,.lightbox-image-wrap,.album-option"))e.preventDefault()});
 const cards=[...document.querySelectorAll(".gallery-card")],uniquePhotos=[],usedNumbers=new Set;cards.forEach(card=>{const number=card.dataset.number;if(!usedNumbers.has(number)){usedNumbers.add(number);uniquePhotos.push({src:card.querySelector("img").src,title:card.dataset.title,number})}});
 const lightbox=document.getElementById("lightbox"),lightboxImage=document.getElementById("lightboxImage"),lightboxCaption=document.getElementById("lightboxCaption"),closeLightbox=document.getElementById("closeLightbox"),nextPhoto=document.getElementById("nextPhoto"),prevPhoto=document.getElementById("prevPhoto"),eventAlbums=document.getElementById("eventAlbums"),closeEventAlbums=document.getElementById("closeEventAlbums"),eventAlbumButtons=[...document.querySelectorAll(".album-option[data-eventset]")];

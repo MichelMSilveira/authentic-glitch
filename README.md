@@ -25,7 +25,7 @@ O portfólio deve apresentar a linguagem visual e editorial própria da Authenti
 
 ## Status
 
-Site estático funcional em evolução. Hosting, domínio e fluxo de deploy ainda precisam ser confirmados; veja [`docs/STATUS.md`](docs/STATUS.md).
+Site estático funcional em evolução. O [`STATUS`](docs/STATUS.md) registra uma publicação anterior no GitHub Pages; a disponibilidade atual, um eventual domínio próprio e o fluxo de publicação ainda precisam ser revalidados antes de uma entrega ao cliente. O acesso por provedor externo tem uma limitação conhecida descrita no STATUS e não deve ser anunciado como funcional até novo teste.
 
 ## Segurança
 

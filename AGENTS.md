@@ -12,3 +12,5 @@ Antes de editar:
 Antes de encerrar uma sessao relevante, atualizar `docs/STATUS.md` e `docs/SESSION.md`.
 
 Nao versionar credenciais, tokens, dados privados ou arquivos temporarios.
+
+Para entrega comercial, confirmar permissão de uso de cada imagem, textos e serviços com o responsável pela marca. Separar site estático publicado de recursos externos ainda limitados. Revisar versão pública, links, contato, navegação por teclado e telas móveis antes de anunciar disponibilidade; registrar evidência e autorização de publicação.
